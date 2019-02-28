@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ventas</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="payroll.html">Pagos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="recruitment.html">Contratacion<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="sales.html">Ventas</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label for="month-select">Mes:</label>
+					<select class="form-control" id="month-select">
+						<option selected>Seleccione alguno...</option>
+						<option value="january">Enero</option>
+            <option value="february">Febrero</option>
+            <option value="march">Marzo</option>
+            <option value="april">Abril</option>
+            <option value="may">Mayo</option>
+            <option value="june">Junio</option>
+            <option value="july">Julio</option>
+            <option value="august">Agosto</option>
+            <option value="september">Septiembre</option>
+            <option value="october">Octubre</option>
+            <option value="november">Noviembre</option>
+            <option value="december">Diciembre</option>
+					</select>
+				</div>
+			</div>
+			<div class="col">
+				<div class="form-group">
+					<label for="year-select">Año:</label>
+					<select class="form-control" id="year-select">
+						<option selected>Seleccione alguno...</option>
+						<option>2017</option>
+						<option>2018</option>
+						<option>2019</option>
+						<option>2020</option>
+						<option>2021</option>
+						<option>2022</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-auto my-4">
+				<input type="button" class="btn btn-primary" id="submit" value="Buscar">
+			</div>
+		</div>
+	</div>
+
+	<!--lista de empleados con sus sueldo por mes-->
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nombre</th>
+				<th scope="col">Apellido</th>
+				<th scope="col">Cedula</th>
+				<th scope="col">Vendido</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody id="edit">
+		</tbody>
+	</table>
+	<script src="../js/sales.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	 crossorigin="anonymous"></script>
+	<script src="../js/recruitment.js"></script>
+</body>
+
+</html>
