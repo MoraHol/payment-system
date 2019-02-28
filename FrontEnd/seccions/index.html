@@ -20,17 +20,76 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pagos</a>
+          <a class="nav-link" href="payroll.html">Pagos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contratacion</a>
+          <a class="nav-link" href="recruitment.html">Contratacion</a>
         </li>
       </ul>
     </div>
   </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="month-select">Mes:</label>
+          <select class="form-control" id="month-select">
+            <option selected>Seleccione alguno...</option>
+            <option>Enero</option>
+            <option>Febrero</option>
+            <option>Marzo</option>
+            <option>Abril</option>
+            <option>Mayo</option>
+            <option>Junio</option>
+            <option>Julio</option>
+            <option>Agosto</option>
+            <option>Septiembre</option>
+            <option>Octubre</option>
+            <option>Noviembre</option>
+            <option>Diciembre</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="year-select">Año:</label>
+          <select class="form-control" id="year-select">
+            <option selected>Seleccione alguno...</option>
+            <option>2017</option>
+            <option>2018</option>
+            <option>2019</option>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-auto my-4">
+        <input type="button" class="btn btn-primary" id="submit" value="Buscar">
+      </div>
+    </div>
+  </div>
+
+  <!--lista de empleados con sus sueldo por mes-->
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Cedula</th>
+        <th scope="col">Vendido</th>
+        <th scope="col">Comision</th>
+        <th scope="col">sueldo</th>
+      </tr>
+    </thead>
+    <tbody id="edit">
+    </tbody>
+  </table>
 </body>
 
 </html>
