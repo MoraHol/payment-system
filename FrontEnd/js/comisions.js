@@ -12,17 +12,18 @@ function loadDoc() {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       employees = JSON.parse(this.responseText)
-      console.log(employees)
       loadHtml()
     }
   }
-  xhttp.open('GET', '../../BackEnd/list.php?date=' + JSON.stringify(date), true)
+  xhttp.open('GET', '../../BackEnd/history.php?date=' + JSON.stringify(date), true)
   xhttp.send()
 }
 
 function loadHtml() {
   for (let index = 0; index < employees.length; index++) {
-    html += "<tr><th scope='row'>" + (index + 1) + '</th><td>' + employees[index].first_name + '</td><td>' + employees[index].last_name + '</td><td>' + employees[index].cc + '</td></tr>'
+    html += "<tr><th scope='row'>" + (index + 1) + '</th><td>' + employees[index].first_name + '</td><td>' + employees[index].last_name + '</td><td>' + employees[index].cc + '</td>'
+    html += '<td>' + employees[index].vendido + '</td><td>' + employees[index].comision + ' %</td><td>' + employees[index].amount + '</td></tr>'
   }
   list.innerHTML = html
+  html = ''
 }

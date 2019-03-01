@@ -12,7 +12,6 @@ function loadDoc() {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       employees = JSON.parse(this.responseText)
-      console.log(employees)
       loadHtml()
     }
   }
@@ -51,5 +50,3 @@ function saveSale(index) {
     xhttp.send()
   }
 }
-let busqueda = "INSERT INTO `sales` (`id`, `month`, `year`, `amount`, `employee_id`, `created_at`) VALUES (NULL, 'frebruary', '2018', '2000000', '1', CURRENT_TIMESTAMP)"
-let query = "SELECT * FROM `employees` JOIN sales WHERE `sales`.`month` = 'february' and `sales`.`year` = '2018'"
