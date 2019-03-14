@@ -20,6 +20,9 @@ function listEmployees() {
 }
 
 function loadHtml() {
+  if (employees.length == 0) {
+    alert("no se han registrado ventas a esta fecha o ya se efectuaron todos los pagos")
+  }
   for (let index = 0; index < employees.length; index++) {
     let amount = employees[index].amount
     html += "<tr><th scope='row'>" + (index + 1) + '</th><td>' + employees[index].first_name + '</td><td>' + employees[index].last_name + '</td><td>' + employees[index].cc + '</td>'
@@ -58,7 +61,11 @@ function loadCalculate() {
       let xhttp = new XMLHttpRequest()
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          alert(this.responseText)
+          if (this.response == "true") {
+            alert("se ha efectuado el pago")
+          } else {
+            alert("no se ha podido efectuar el pago")
+          }
         }
       }
       xhttp.open('GET', '../../BackEnd/payroll.php?data=' + JSON.stringify(data), true)
